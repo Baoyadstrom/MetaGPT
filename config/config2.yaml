@@ -1,8 +1,11 @@
-# Full Example: https://github.com/geekan/MetaGPT/blob/main/config/config2.example.yaml
-# Reflected Code: https://github.com/geekan/MetaGPT/blob/main/metagpt/config2.py
-# Config Docs: https://docs.deepwisdom.ai/main/en/guide/get_started/configuration.html
+# 百度文心一言API配置文件
+# 基于 https://luckycola.com.cn/ai/openwxyy 接口
 llm:
-  api_type: "openai"  # or azure / ollama / groq etc.
-  model: "gpt-4-turbo"  # or gpt-3.5-turbo
-  base_url: "https://api.openai.com/v1"  # or forward url / other llm url
-  api_key: "YOUR_API_KEY"
+  api_type: "wenxin"  # 使用百度文心一言API
+  base_url: "https://luckycola.com.cn/ai/openwxyy"  # 文心一言API地址
+  app_key: "652a1761e95421d67847d086"
+  uid: "FUfMOe1697257279052FC0ayVmYAY" 
+  is_long_chat: 1  # 是否为长对话，1表示是，0表示否
+
+# 其他配置项已移除，仅保留文心一言API相关配置
+repair_llm_output: true  # 当输出不是有效的json时，尝试修复它
